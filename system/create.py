@@ -3,6 +3,7 @@
 
 from system import system
 
+#创建测试用用户
 def create():
 	_ul = open(system.userlist, 'w')
 	_ul.write(system.IDsign + '111' + system.namesign + '111\n')
