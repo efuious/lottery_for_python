@@ -1,0 +1,26 @@
+illegal input detect
+
+#clear:usermanagment->delete:search name error, there is a example in ../delete.py
+#check user information in 'info.py'
+#system.py: openfile and inputfile
+
+lottery present setting for single
+
+#first is shown_management and the way to save present 
+#Page 79 the class questions
+#only for single lottery, the saved information should have ???
+#but now, set shown management first
+
+#--important
+#system.inputfile->except IOError: wrong,can't catch when file not exist,do not return False, crash
+#how about change info.std_show->system.openfile into system.inputfile and see wheather we can open non-exsit file of slogen
+#---steps:
+#1.setting.py: "def show_shown()": line 2 change inputfile into open	???
+#?? how about change all fileinput into openfile?
+#2. info.py: "show_userlist()": line 2 change "inputfile" into "openfile"
+# over, no file use 'inputfile'
+#--
+
+lottery.py: rolling()->shown setting has no use
+shown setting: rolling times and numbers
+setting presenet
