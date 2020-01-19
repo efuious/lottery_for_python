@@ -1,3 +1,5 @@
+#函数功能测试
+
 from system import system
 
 #_file = open(system.shown,'w+')
@@ -6,7 +8,6 @@ from system import system
 #_file.write('1')
 #_file.close()
 #print(line)
-
 
 #_file = system.openfile(system.userlist)
 #if _file == False:

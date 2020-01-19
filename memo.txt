@@ -1,3 +1,5 @@
+#备忘录
+
 illegal input detect
 
 #clear:usermanagment->delete:search name error, there is a example in ../delete.py

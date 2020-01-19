@@ -1,7 +1,9 @@
+#抽奖函数(待实现)
+
 from system import system
 import time
 
-
+#抽奖主页
 def lottery():
 	while True:
 		show_ins()
@@ -11,11 +13,13 @@ def lottery():
 		else:
 			system.ErrorBack("error input: " + _input)
 
+#显示提示
 def show_ins():
 	system.clrscr()
 	print("1.single")
 	print("2.back")
 
+#抽奖滚动显示(待实现)
 def rolling(_list):
 	system.clrscr()
 	_shown = system.openfile(system.shown)
@@ -40,6 +44,7 @@ def rolling(_list):
 	_shown.close()
 	return _max
 
+#单人抽奖(待实现)
 def single():
 	_list = system.openfile(system.userlist)
 	n_user = rolling(_list)

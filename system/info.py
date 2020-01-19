@@ -1,6 +1,8 @@
+#系统信息
+
 from system import system
 
-
+#信息选择
 def information():
 	while 1:
 		Show_Ins()
@@ -20,7 +22,7 @@ def information():
 		else:
 			system.ErrorBack(("error input:" + _input))
 	
-
+#操作提示
 def Show_Ins():
 	system.clrscr()
 	print("1.check slogen")
@@ -31,6 +33,7 @@ def Show_Ins():
 	print("6.about")
 	print("7.back")
 
+#格式化输出(默认)
 def std_show(_filename):
 	system.clrscr()
 	_file = system.openfile(_filename)
@@ -43,6 +46,7 @@ def std_show(_filename):
 	system.PressBack()
 	return 0
 
+#格式化用户列表输出
 def show_userlist():
 	system.clrscr()
 	_userlist = system.openfile(system.userlist)
@@ -59,6 +63,7 @@ def show_userlist():
 	_userlist.close()
 	system.PressBack()
 
+#查看单个用户数据
 def check_user():
 	system.clrscr()
 	_ID = input("input the ID you want to inquire:")	
@@ -71,7 +76,7 @@ def check_user():
 		if num == 0:print("Name: "+line.strip('\n'))
 		elif num == 1: print("Age: "+line.strip('\n'))
 		elif num == 2: print("Sex: "+line.strip('\n'))
-		num+=1	
+		num+=1
 
 	system.PressBack()
 

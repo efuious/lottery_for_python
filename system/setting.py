@@ -1,7 +1,9 @@
+#系统设置
+
 from system import system, usermanage
 import os
 
-
+#选项
 def setting():
 	while 1:
 		Show_Ins()
@@ -21,7 +23,7 @@ def setting():
 		else:
 			system.ErrorBack("error input:" + _input)
 			
-
+#操作提示
 def Show_Ins():
 	system.clrscr()
 	print("====Setting====")	
@@ -32,6 +34,7 @@ def Show_Ins():
 	print("5.shown management")
 	print("6.back")
 
+#设置标语
 def set_slogen():
 	_input = input("input the slogen:")
 	slogen = open(system.slogen, "w")
@@ -39,9 +42,10 @@ def set_slogen():
 	slogen.close()
 	system.ErrorBack("success...")	
 
+#删除抽奖历史
 def delete_history():
 	_input = input("are you sure to delete it? [Y/n]")
-	if _input == "Y":
+	if _input == "Y" or _input == 'y':
 		try:
 			os.remove(system.history)
 		except IOError:
@@ -49,6 +53,7 @@ def delete_history():
 	else:
 		return 0
 
+#用户信息设置
 def set_user():
 	while 1:
 		system.clrscr()
@@ -65,12 +70,14 @@ def set_user():
 		else:
 			system.ErrorBack("Error input: " + _input)
 
+#用户信息设置操作提示
 def show_set_user():
 	print("1.add user")
 	print("2.delete user")
 	print("3.change user information")
 	print("4.back")
 
+#设置滚动显示方式
 def set_shown():
 	show_shown()
 	_ID = input("show user ID? " + system.yon + " : ")
@@ -86,6 +93,7 @@ def set_shown():
 	_file.close()
 	return 0
 
+#滚动显示设置内容提示
 def show_shown():
 	system.clrscr()
 	_file = system.openfile(system.shown)
@@ -108,6 +116,7 @@ def show_shown():
 		_file.close()
 		return True
 
+#设置奖品(待实现)
 def set_present():
 	system.clrscr()
 	print('set present')

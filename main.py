@@ -1,8 +1,11 @@
-from system import system
-from system import lottery
-from system import setting
-from system import info
+#main page
 
+from system import system		#系统参数相关
+from system import lottery		#抽奖相关(待实现)
+from system import setting		#系统设置相关
+from system import info			#系统信息相关
+
+#主页
 def MainPage():
 	while 1:
 		Instructions()
@@ -19,6 +22,7 @@ def MainPage():
 			system.clrscr()
 			system.ErrorBack(("error input:", num));
 
+#主页操作提示
 def Instructions():
 	system.clrscr()
 	print("welcom to lottery systemtem")
